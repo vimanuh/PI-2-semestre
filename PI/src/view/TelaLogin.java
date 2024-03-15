@@ -15,6 +15,9 @@ public class TelaLogin extends javax.swing.JFrame {
      */
     public TelaLogin() {
         initComponents();
+        
+        this.TxtSenha.setBackground(new java.awt.Color(0,0,0,1));
+        this.TxtEmail.setBackground(new java.awt.Color(0,0,0,1));
     }
 
     /**
@@ -27,12 +30,55 @@ public class TelaLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        BtnEntrar = new javax.swing.JButton();
+        BtnCriarConta = new javax.swing.JButton();
+        TxtEmail = new javax.swing.JTextField();
+        TxtSenha = new javax.swing.JPasswordField();
         Fundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setLayout(null);
+
+        BtnEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Login/btn lentrar.png"))); // NOI18N
+        BtnEntrar.setBorder(null);
+        BtnEntrar.setBorderPainted(false);
+        BtnEntrar.setContentAreaFilled(false);
+        BtnEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnEntrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnEntrarMouseClicked(evt);
+            }
+        });
+        jPanel1.add(BtnEntrar);
+        BtnEntrar.setBounds(420, 360, 110, 50);
+
+        BtnCriarConta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Login/btn criar conta.png"))); // NOI18N
+        BtnCriarConta.setBorder(null);
+        BtnCriarConta.setBorderPainted(false);
+        BtnCriarConta.setContentAreaFilled(false);
+        BtnCriarConta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnCriarConta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnCriarContaMouseClicked(evt);
+            }
+        });
+        jPanel1.add(BtnCriarConta);
+        BtnCriarConta.setBounds(550, 360, 140, 50);
+
+        TxtEmail.setBorder(null);
+        TxtEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtEmailActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TxtEmail);
+        TxtEmail.setBounds(420, 190, 280, 40);
+
+        TxtSenha.setBorder(null);
+        jPanel1.add(TxtSenha);
+        TxtSenha.setBounds(420, 280, 280, 30);
 
         Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Login/Tela de login.png"))); // NOI18N
         jPanel1.add(Fundo);
@@ -52,6 +98,18 @@ public class TelaLogin extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(816, 539));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnEntrarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnEntrarMouseClicked
+
+    private void BtnCriarContaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCriarContaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnCriarContaMouseClicked
+
+    private void TxtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtEmailActionPerformed
 
     /**
      * @param args the command line arguments
@@ -90,7 +148,11 @@ public class TelaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnCriarConta;
+    private javax.swing.JButton BtnEntrar;
     private javax.swing.JLabel Fundo;
+    private javax.swing.JTextField TxtEmail;
+    private javax.swing.JPasswordField TxtSenha;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
